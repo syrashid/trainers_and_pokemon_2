@@ -43,9 +43,6 @@ Pokemon.create!(
   trainer: brock
 )
 
-
-
-
 names = %w(Water\ Gun Thunderbolt Ember Dig Tackle Body\ Slam)
 
 names.each do |name|
