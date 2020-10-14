@@ -1,4 +1,8 @@
-Trainer.destroy_all
+if Rails.env.development?
+  Trainer.destroy_all
+  Pokemon.destroy_all
+  Move.destroy_all
+end
 
 ash = Trainer.create!(
   name: "Ash Ketchum",
@@ -38,3 +42,12 @@ Pokemon.create!(
   image_url: "https://cdn.bulbagarden.net/upload/thumb/9/9a/095Onix.png/500px-095Onix.png",
   trainer: brock
 )
+
+
+
+
+names = %w(Water\ Gun Thunderbolt Ember Dig Tackle Body\ Slam)
+
+names.each do |name|
+  Move.create!(name: name)
+end
